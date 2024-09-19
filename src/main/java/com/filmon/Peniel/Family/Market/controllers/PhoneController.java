@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,27 +21,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
+@RequestMapping("/phones")
 public class PhoneController {
 	
-	private PhoneDAO phoneDAO;
+	private final PhoneDAO phoneDAO;
 	
 	public PhoneController(PhoneDAO phoneDAO) {
 		this.phoneDAO = phoneDAO;
 	}
 	
 
-	@RequestMapping(path="/phone-list", method=RequestMethod.GET)
+	@GetMapping("/list")
 	public List<Phone> list(){	
 		
 		return phoneDAO.findAll();
 		
 	}
-	 @RequestMapping(path="/create-phone", method= RequestMethod.POST)
+	@PostMapping("/create")
 	public Phone create(@RequestBody Phone phone){
 		return phoneDAO.create(phone);
 		
 	}
-	@RequestMapping(path="phone-get-byId/{id}", method=RequestMethod.GET)
+	@GetMapping("/get/{id}")
 	public Phone get(@PathVariable(name="id") long id) {
 		Phone phone = phoneDAO.findById(id);
 
@@ -47,12 +50,12 @@ public class PhoneController {
 		
 	}
 
-	@RequestMapping(path="phone-delete/{id}", method=RequestMethod.DELETE)
+	@DeleteMapping("/delete/{id}")
 	public void delete(@PathVariable(name="id") long id) {
 		phoneDAO.deleteById(id);
 	}
 
-	@RequestMapping(path="phone-update", method=RequestMethod.PUT)
+	@PutMapping("/update/{id}")
 	public void update(@PathVariable int id, @RequestBody Phone phone) {
 		phoneDAO.update(phone);
 	}
