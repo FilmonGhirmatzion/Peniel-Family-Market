@@ -1,9 +1,9 @@
-package com.filmon.Peniel.Family.Market.repositories;
+// package com.filmon.Peniel.Family.Market.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.filmon.Peniel.Family.Market.models.Phone;
+// import com.filmon.Peniel.Family.Market.models.Phone;
 
-public interface PhoneRepository extends JpaRepository<Phone, Long> {
+// public interface PhoneRepository extends JpaRepository<Phone, Long> {
 
-}
+// }
