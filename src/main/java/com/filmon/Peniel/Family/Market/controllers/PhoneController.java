@@ -36,10 +36,12 @@ public class PhoneController {
 		return phoneDAO.create(phone);
 		
 	}
-	@GetMapping("/{id}")
-	public Phone get(@PathVariable("id") long id) {
-		return new Phone();
-		// return phoneReposiroty.getOne(id);
+	@RequestMapping(path="phone-get-byId/{id}", method=RequestMethod.GET)
+	public Phone get(@PathVariable(name="id") long id) {
+		Phone phone = phoneDAO.findById(id);
+
+		return phone;
+		
 	}
 
 }
