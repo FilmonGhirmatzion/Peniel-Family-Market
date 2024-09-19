@@ -1,5 +1,6 @@
 package com.filmon.Peniel.Family.Market.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -49,11 +50,11 @@ public class JdbcPhone implements PhoneDAO {
         String sql = "SELECT id, name, brand, model, phone_number, serial_number, os, email, storage_capacity, ram_size, is_5g, price, purchase_date, contact_person, contact FROM phone WHERE id =?";
         SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, id);
         if (rows.next()) {
-            phone = mapRowTogameForSale(rows);
+            phone = mapRowToPhone(rows);
         }
         return phone;
     }
-    private Phone mapRowTogameForSale(SqlRowSet row) {
+    private Phone mapRowToPhone(SqlRowSet row) {
         Phone phone = new Phone();
         phone.setId(row.getLong("id"));
         phone.setName(row.getString("name"));
@@ -77,19 +78,43 @@ public class JdbcPhone implements PhoneDAO {
 
     @Override
     public List<Phone> findAll() {
-        // TODO Auto-generated method stub
-        return null;
+        List<Phone> phones = new ArrayList<>();
+        String sql = "SELECT id, name, brand, model, phone_number, serial_number, os, email, storage_capacity, ram_size, is_5g, price, purchase_date, contact_person, contact FROM phone";
+        SqlRowSet rows = jdbcTemplate.queryForRowSet(sql);
+        while (rows.next()) {
+            Phone phone = mapRowToPhone(rows);
+            phones.add(phone);
+        }
+        return phones;
     }
 
     @Override
     public void update(Phone phone) {
-        // TODO Auto-generated method stub
+        String sql = "UPDATE phone SET name = ?, brand = ?, model = ?, phone_number = ?, serial_number = ?, os = ?, email = ?, storage_capacity = ?, ram_size = ?, is_5g = ?, price = ?, purchase_date = ?, contact_person = ?, contact = ? WHERE id = ?";
+        jdbcTemplate.update(sql, 
+            phone.getName(),
+            phone.getBrand(), 
+            phone.getModel(), 
+            phone.getPhoneNumber(),
+            phone.getSerialNumber(), 
+            phone.getOs(),
+            phone.getEmail(), 
+            phone.getStorageCapacity(), 
+            phone.getRamSize(), 
+            phone.is5G(),
+            phone.getPrice(), 
+            phone.getPurchaseDate(), 
+            phone.getContactPerson(), 
+            phone.isContact(),
+            phone.getId()
+        );
         
     }
 
     @Override
     public void deleteById(Long id) {
-        // TODO Auto-generated method stub
+        String sql = "DELETE FROM phone WHERE id = ?";
+        jdbcTemplate.update(sql, id);
         
     }
 

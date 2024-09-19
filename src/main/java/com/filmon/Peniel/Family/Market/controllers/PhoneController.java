@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.filmon.Peniel.Family.Market.models.Phone;
 // import com.filmon.Peniel.Family.Market.repositories.PhoneRepository;
 import com.filmon.Peniel.Family.Market.services.PhoneDAO;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class PhoneController {
@@ -24,11 +26,12 @@ public class PhoneController {
 	public PhoneController(PhoneDAO phoneDAO) {
 		this.phoneDAO = phoneDAO;
 	}
-	@GetMapping 
-	public List<Phone> list(){		
-		List<Phone> phone = new ArrayList<>();
-		return phone;
-		// return phoneReposiroty.findAll();
+	
+
+	@RequestMapping(path="/phone-list", method=RequestMethod.GET)
+	public List<Phone> list(){	
+		
+		return phoneDAO.findAll();
 		
 	}
 	 @RequestMapping(path="/create-phone", method= RequestMethod.POST)
@@ -42,6 +45,16 @@ public class PhoneController {
 
 		return phone;
 		
+	}
+
+	@RequestMapping(path="phone-delete/{id}", method=RequestMethod.DELETE)
+	public void delete(@PathVariable(name="id") long id) {
+		phoneDAO.deleteById(id);
+	}
+
+	@RequestMapping(path="phone-update", method=RequestMethod.PUT)
+	public void update(@PathVariable int id, @RequestBody Phone phone) {
+		phoneDAO.update(phone);
 	}
 
 }
