@@ -2,7 +2,23 @@ package com.filmon.Peniel.Family.Market.models;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity 
+@JsonIgnoreProperties({"hibernateLazyIntializer", "handler"})
 public class Phone {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	
 	
 	private String name;
 	private String brand;
@@ -12,9 +28,10 @@ public class Phone {
     private String os; 
     private String email;
     private int storageCapacity;
-    private int ramSize; // In GB
-    private boolean is5G; // 5G capability
-    private double price; // In inches
+    private int ramSize; 
+    private boolean is5G; 
+    private double price; 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
     private Date purchaseDate;
     private String contactPerson;
     private boolean contact;
@@ -103,6 +120,12 @@ public class Phone {
 	}
 	public void setContact(boolean contact) {
 		this.contact = contact;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 

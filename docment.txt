@@ -1,0 +1,52 @@
+
+
+to create database connection 
+
+psql -U postgres -c "CREATE DATABASE peniel_family"
+
+
+load the struacture and data
+psql -U postgres -d peniel_family -f peniel_family.sql
+
+
+
+
+
+
+
+CREATE TABLE Phone (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    brand VARCHAR(100),
+    model VARCHAR(100),
+    phone_number VARCHAR(15),
+    serial_number VARCHAR(50) UNIQUE,
+    os VARCHAR(50),
+    email VARCHAR(100),
+    storage_capacity INT,
+    ram_size INT,
+    is_5G BOOLEAN,
+    price NUMERIC(10, 2),
+    purchase_date DATE,
+    contact_person VARCHAR(100),
+    contact BOOLEAN
+);
+
+
+
+INSERT INTO Phone (
+    name, brand, model, phone_number, serial_number, os, email, 
+    storage_capacity, ram_size, is_5G, price, purchase_date, contact_person, contact
+)
+VALUES
+    ('Galaxy S21', 'Samsung', 'SM-G991B', '123-456-7890', 'ABC123XYZ', 'Android', 'johndoe@example.com', 
+    128, 8, TRUE, 799.99, '2024-09-16', 'Filmon GHi', TRUE),
+    
+    ('iPhone 14', 'Apple', 'A2643', '987-654-3210', 'DEF456JKL', 'iOS', 'janesmith@example.com', 
+    256, 6, TRUE, 999.99, '2024-09-10', 'peni fil', TRUE),
+    
+    ('Pixel 7', 'Google', 'GA02293', '555-555-5555', 'GHI789MNO', 'Android', 'bobbuilder@example.com', 
+    128, 8, TRUE, 699.99, '2024-09-12', 'lwa fil', FALSE),
+    
+    ('OnePlus 11', 'OnePlus', 'NE2211', '333-222-1111', 'JKL987PQR', 'Android', 'alicewonder@example.com', 
+    256, 12, TRUE, 799.99, '2024-09-14', 'sami tes', TRUE);
