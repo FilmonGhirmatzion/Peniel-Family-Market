@@ -1,1 +1,24 @@
-<p>admin works!</p>
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Owner Name</th>
+      <th>Email</th>
+      <th>Model</th>
+      <th class="text-right">Purchase Price</th>
+    </tr>
+    <tr *ngFor="let phone of phones">
+      <td>
+        {{phone.name}}
+      </td>
+      <td>
+        {{phone.email}}
+      </td>
+      <td>
+        {{phone.model}}
+      </td>
+      <td class="text-right">
+        {{phone.price}}
+      </td>
+    </tr>
+  </table>
+</div>
