@@ -50,3 +50,19 @@ VALUES
     
     ('OnePlus 11', 'OnePlus', 'NE2211', '333-222-1111', 'JKL987PQR', 'Android', 'alicewonder@example.com', 
     256, 12, TRUE, 799.99, '2024-09-14', 'sami tes', TRUE);
+
+
+
+To create new project with our standlone
+ ng new Peniel-family --no-standalone
+
+
+connection to server 
+http://localhost:4200/server/phones/list
+
+
+
+
+
+
+
