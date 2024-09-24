@@ -1,24 +1,36 @@
 <div class="container">
   <table class="table table-bordered table-inverse">
     <tr>
-      <th>Owner Name</th>
-      <th>Email</th>
+      <th>Name</th>
+      <th>Brand</th>
       <th>Model</th>
-      <th class="text-right">Purchase Price</th>
+      <th>Phone Number</th>
+      <th>Serial Number</th>
+      <th>OS</th>
+      <th>Email</th>
+      <th>Storage Capacity</th>
+      <th>RAM Size</th>
+      <th>5G</th>
+      <th>Price</th>
+      <th>Purchase Date</th>
+      <th>Contact Person</th>
+      <th>Contact</th>
     </tr>
     <tr *ngFor="let phone of phones">
-      <td>
-        {{phone.name}}
-      </td>
-      <td>
-        {{phone.email}}
-      </td>
-      <td>
-        {{phone.model}}
-      </td>
-      <td class="text-right">
-        {{phone.price}}
-      </td>
+      <td>{{phone.name}}</td>
+      <td>{{phone.brand}}</td>
+      <td>{{phone.model}}</td>
+      <td>{{phone.phoneNumber}}</td>
+      <td>{{phone.serialNumber}}</td>
+      <td>{{phone.os}}</td>
+      <td>{{phone.email}}</td>
+      <td>{{phone.storageCapacity}}</td>
+      <td>{{phone.ramSize}}</td>
+      <td>{{phone.is5G}}</td>
+      <td class="text-right">{{phone.price}}</td>
+      <td>{{phone.purchaseDate | date:'MM-dd-yyyy'}}</td>
+      <td>{{phone.contactPerson}}</td>
+      <td>{{phone.contact}}</td>
     </tr>
   </table>
 </div>

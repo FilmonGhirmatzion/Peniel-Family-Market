@@ -63,6 +63,14 @@ http://localhost:4200/server/phones/list
 
 
 
+localhost:4200/server/phones/list
+localhost:4200/server/phones/get/3
+http://localhost:4200/admin
+
+
+
+
+
 
 
 
