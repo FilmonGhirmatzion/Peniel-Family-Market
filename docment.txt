@@ -66,6 +66,8 @@ http://localhost:4200/server/phones/list
 localhost:4200/server/phones/list
 localhost:4200/server/phones/get/3
 http://localhost:4200/admin
+pg_dump -U postgres -h localhost -p 5432 peniel_family > /C:/Workspace/Training/Filmon-Learning/New projects/Peniel-Family-Market/database/peniel_family.sql
+
 
 
 

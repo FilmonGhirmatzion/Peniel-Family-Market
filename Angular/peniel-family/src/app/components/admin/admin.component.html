@@ -17,23 +17,18 @@
       <th>Contact</th>
     </tr>
     <tr *ngFor="let phone of phones">
-      <td>{{phone.name}}</td>
-      <td>{{phone.brand}}</td>
-      <td>{{phone.model}}</td>
-      <td>{{phone.phoneNumber}}</td>
-      <td>{{phone.serialNumber}}</td>
-      <td>{{phone.os}}</td>
-      <td>{{phone.email}}</td>
-      <td>{{phone.storageCapacity}}</td>
-      <td>{{phone.ramSize}}</td>
-      <td>{{phone.is5G}}</td>
-      <td class="text-right">{{phone.price}}</td>
-      <td>{{phone.purchaseDate | date:'MM-dd-yyyy'}}</td>
-      <td>{{phone.contactPerson}}</td>
-      <td>{{phone.contact}}</td>
+      <td>
+        <a [routerLink]="['/admin/view', phone.id]">{{phone.name}}</a>
+      </td>
+      <td>
+        {{phone.brand}}
+      </td>
+      <td>
+        {{phone.model}}
+      </td>
     </tr>
   </table>
 </div>
 
 
-<!-- html-->
+
