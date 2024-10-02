@@ -22,6 +22,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.phoneform = new FormGroup({
+      contactPerson: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       phoneNumber: new FormControl('', Validators.required),

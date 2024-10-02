@@ -1,6 +1,7 @@
 <div class="container">
   <table class="table table-bordered table-inverse">
     <tr>
+      <th>Contact Person</th>
       <th>Name</th>
       <th>Brand</th>
       <th>Model</th>
@@ -11,7 +12,7 @@
       <th>Storage Capacity</th>
       <th>RAM Size</th>
       <th>5G</th>
-      <th>Price</th>
+      <th>price </th>
       <th>Purchase Date</th>
       <th>Contact Person</th>
       <th>Contact</th>
@@ -19,6 +20,9 @@
     <tr *ngFor="let phone of phones">
       <td>
         <a [routerLink]="['/admin/view', phone.id]">{{phone.name}}</a>
+      </td>
+      <td>
+        {{phone.contactPerson}}
       </td>
       <td>
         {{phone.name}}

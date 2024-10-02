@@ -17,8 +17,8 @@ export class PhoneService {
     return this.http.get('/server/phones/list');
   }
 
-  getPhoneById(id: string): Observable<any> {
-    return this.http.get('/server/phones/${id}');
+  getPhone(id: number): Observable<any> {
+    return this.http.get('/server/phones/' + id);
 }
    createPhoneRegistration(phone: any): Observable<any> {
     let body = JSON.stringify(phone);

@@ -96,6 +96,18 @@
     "@angular-devkit/architect" "0.1802.6"
     rxjs "7.8.1"
 
+"@angular-devkit/core@^18.2.7":
+  version "18.2.7"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/@angular-devkit/core/-/core-18.2.7.tgz"
+  integrity sha512-1ZTi4A6tEC2bkJ/puCIdIPYhesnlCVOMSDJL/lZAd0hC6X22T4pwu0AEvue7mcP5NbXpQDiBaXOZ3MmCA8PwOA==
+  dependencies:
+    ajv "8.17.1"
+    ajv-formats "3.0.1"
+    jsonc-parser "3.3.1"
+    picomatch "4.0.2"
+    rxjs "7.8.1"
+    source-map "0.7.4"
+
 "@angular-devkit/core@18.2.6":
   version "18.2.6"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/@angular-devkit/core/-/core-18.2.6.tgz"
@@ -1611,6 +1623,11 @@
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@popperjs/core@^2.11.8":
+  version "2.11.8"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/@popperjs/core/-/core-2.11.8.tgz"
+  integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+
 "@rollup/rollup-win32-x64-msvc@4.22.4":
   version "4.22.4"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.22.4.tgz"
@@ -2325,6 +2342,11 @@ boolbase@^1.0.0:
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/boolbase/-/boolbase-1.0.0.tgz"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
+bootstrap@^5.3.3:
+  version "5.3.3"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/bootstrap/-/bootstrap-5.3.3.tgz"
+  integrity sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -2689,7 +2711,7 @@ core-util-is@~1.0.0:
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/core-util-is/-/core-util-is-1.0.3.tgz"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
-cors@~2.8.5:
+cors@^2.8.5, cors@~2.8.5:
   version "2.8.5"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/cors/-/cors-2.8.5.tgz"
   integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
@@ -2773,6 +2795,13 @@ date-format@^4.0.14:
   version "4.0.14"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/date-format/-/date-format-4.0.14.tgz"
   integrity sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==
+
+debug@^3.0.1:
+  version "3.2.7"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/debug/-/debug-3.2.7.tgz"
+  integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
+  dependencies:
+    ms "^2.1.1"
 
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.4, debug@~4.3.1, debug@~4.3.2, debug@~4.3.4, debug@4:
   version "4.3.7"
@@ -3045,6 +3074,11 @@ es-module-lexer@^1.2.1:
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/es-module-lexer/-/es-module-lexer-1.5.4.tgz"
   integrity sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==
 
+es6-promise@^4.1.1:
+  version "4.2.8"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/es6-promise/-/es6-promise-4.2.8.tgz"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
 esbuild-wasm@0.23.0:
   version "0.23.0"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/esbuild-wasm/-/esbuild-wasm-0.23.0.tgz"
@@ -3193,6 +3227,15 @@ exponential-backoff@^3.1.1:
   version "3.1.1"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/exponential-backoff/-/exponential-backoff-3.1.1.tgz"
   integrity sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==
+
+express-http-proxy@^2.1.1:
+  version "2.1.1"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/express-http-proxy/-/express-http-proxy-2.1.1.tgz"
+  integrity sha512-4aRQRqDQU7qNPV5av0/hLcyc0guB9UP71nCYrQEYml7YphTo8tmWf3nDZWdTJMMjFikyz9xKXaURor7Chygdwg==
+  dependencies:
+    debug "^3.0.1"
+    es6-promise "^4.1.1"
+    raw-body "^2.3.0"
 
 express@^4.17.3:
   version "4.21.0"
@@ -4559,7 +4602,7 @@ mrmime@2.0.0:
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/mrmime/-/mrmime-2.0.0.tgz"
   integrity sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==
 
-ms@^2.1.3, ms@2.1.3:
+ms@^2.1.1, ms@^2.1.3, ms@2.1.3:
   version "2.1.3"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
@@ -5004,6 +5047,7 @@ path-type@^5.0.0:
   version "0.0.0"
   resolved "file:"
   dependencies:
+    "@angular-devkit/core" "^18.2.7"
     "@angular/animations" "^18.2.0"
     "@angular/common" "^18.2.0"
     "@angular/compiler" "^18.2.0"
@@ -5012,6 +5056,9 @@ path-type@^5.0.0:
     "@angular/platform-browser" "^18.2.0"
     "@angular/platform-browser-dynamic" "^18.2.0"
     "@angular/router" "^18.2.0"
+    bootstrap "^5.3.3"
+    cors "^2.8.5"
+    express-http-proxy "^2.1.1"
     phone-ui "file:"
     rxjs "~7.8.0"
     tslib "^2.3.0"
@@ -5050,6 +5097,11 @@ pkg-dir@^7.0.0:
   integrity sha512-Ie9z/WINcxxLp27BKOCHGde4ITq9UklYKDzVo1nhk5sqGEXU3FpkwP5GM2voTGJkGd9B3Otl+Q4uwSOeSUtOBA==
   dependencies:
     find-up "^6.3.0"
+
+port@^0.8.1:
+  version "0.8.1"
+  resolved "https://art.nwie.net:443/artifactory/api/npm/npm/port/-/port-0.8.1.tgz"
+  integrity sha512-PlmFeMxN/SD9LJ4enMg7hFTJuj2fpy+ZWndlts+XfNB6K207/yPhOXYrav/q2oLb5ZTiXnTRnnfuvvH+AVJFDg==
 
 postcss-loader@8.1.1:
   version "8.1.1"
@@ -5199,7 +5251,7 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/range-parser/-/range-parser-1.2.1.tgz"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-raw-body@2.5.2:
+raw-body@^2.3.0, raw-body@2.5.2:
   version "2.5.2"
   resolved "https://art.nwie.net:443/artifactory/api/npm/npm/raw-body/-/raw-body-2.5.2.tgz"
   integrity sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==
