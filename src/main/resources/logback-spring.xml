@@ -16,7 +16,7 @@
 	<Appender name="splunkAppender" class="com.splunk.logging.HttpEventCollectorLogbackAppender">
         <url>https://10.24.106.68:8080</url>
 <!--         <source>${springAppName}-${springProfile}</source> -->
-		<source>game-exchange</source>
+		<source>peniel-family-market</source>
         <token>${SPLUNK_TOKEN}</token>
         <disableCertificateValidation>true</disableCertificateValidation>
         <sourcetype>json</sourcetype>
