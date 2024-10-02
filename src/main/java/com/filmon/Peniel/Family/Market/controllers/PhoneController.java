@@ -3,6 +3,8 @@ package com.filmon.Peniel.Family.Market.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +24,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 @RequestMapping("/phones")
 public class PhoneController {
+
+	private static Logger logger = LoggerFactory.getLogger(PhoneController.class);
 	
 	private final PhoneDAO phoneDAO;
 	
@@ -30,12 +34,20 @@ public class PhoneController {
 	}
 	
 
+	// @GetMapping("/list")
+	// public List<Phone> list(){	
+		
+	// 	return phoneDAO.findAll();
+		
+	// }
 	@GetMapping("/list")
-	public List<Phone> list(){	
-		
-		return phoneDAO.findAll();
-		
-	}
+    public List<Phone> list() {
+        logger.info("Request received to list all phones");
+        List<Phone> phones = phoneDAO.findAll();
+        logger.info("Returning list of phones: {}", phones);
+        return phones;
+    }
+
 	@PostMapping("/create")
 	public Phone create(@RequestBody Phone phone){
 		return phoneDAO.create(phone);
