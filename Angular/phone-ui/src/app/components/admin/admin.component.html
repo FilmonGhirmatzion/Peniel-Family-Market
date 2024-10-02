@@ -2,42 +2,48 @@
   <table class="table table-bordered table-inverse">
     <tr>
       <th>Contact Person</th>
-      <th>Name</th>
+      <th>Name of phone</th>
       <th>Brand</th>
       <th>Model</th>
       <th>Phone Number</th>
       <th>Serial Number</th>
-      <th>OS</th>
       <th>Email</th>
       <th>Storage Capacity</th>
-      <th>RAM Size</th>
-      <th>5G</th>
       <th>price </th>
       <th>Purchase Date</th>
-      <th>Contact Person</th>
       <th>Contact</th>
     </tr>
     <tr *ngFor="let phone of phones">
       <td>
-        <a [routerLink]="['/admin/view', phone.id]">{{phone.name}}</a>
-      </td>
-      <td>
-        {{phone.contactPerson}}
+        <a [routerLink]="['/admin/view', phone.id]">{{phone.contactPerson}}</a>
       </td>
       <td>
         {{phone.name}}
-      </td>
-      <td>
-        {{phone.email}}
-      </td>
       <td>
         {{phone.brand}}
       </td>
       <td>
         {{phone.model}}
       </td>
-      <td class="text-right">
+      <td>
+        {{phone.phoneNumber}}
+      </td>
+      <td>
+        {{phone.serialNumber}}
+      </td>
+      <td>
+        {{phone.email}}
+      </td>
+      <td>
+        {{phone.storageCapacity}}
+      <td>
         {{phone.price}}
+      </td>
+      <td>
+        {{phone.purchaseDate}}
+      </td>
+      <td class="text-right">
+        {{phone.contact}}
       </td>
     </tr>
   </table>
