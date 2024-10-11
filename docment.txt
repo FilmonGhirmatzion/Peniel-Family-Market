@@ -71,6 +71,24 @@ pg_dump -U postgres -h localhost -p 5432 peniel_family > /C:/Workspace/Training/
 
 
 
+CREATE TABLE Phone_Peniel (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    brand VARCHAR(100),
+    model VARCHAR(100),
+    phoneNumber VARCHAR(15),
+    serialNumber VARCHAR(50) UNIQUE,
+    os VARCHAR(50),
+    email VARCHAR(100),
+    storageCapacity INT,
+    ramSize INT,
+    is5G BOOLEAN,
+    price NUMERIC(10, 2),
+    purchaseDate DATE,
+    contactPerson VARCHAR(100),
+    contact BOOLEAN
+);
+
 
 
 

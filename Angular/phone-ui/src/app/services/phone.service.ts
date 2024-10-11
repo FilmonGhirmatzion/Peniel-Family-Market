@@ -14,7 +14,7 @@ export class PhoneService {
   constructor(private http:HttpClient) { }
 
   getPhones(): Observable<any> {
-    return this.http.get('/server/phones/list');
+    return this.http.get('http://localhost:8080/phones/list');
   }
 
   getPhone(id: number): Observable<any> {

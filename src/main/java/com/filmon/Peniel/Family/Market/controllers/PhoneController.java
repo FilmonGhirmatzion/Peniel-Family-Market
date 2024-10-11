@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,7 @@ import com.filmon.Peniel.Family.Market.models.Phone;
 import com.filmon.Peniel.Family.Market.services.PhoneDAO;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/phones")
 public class PhoneController {
@@ -48,11 +49,18 @@ public class PhoneController {
         return phones;
     }
 
-	@PostMapping("/create")
-	public Phone create(@RequestBody Phone phone){
-		return phoneDAO.create(phone);
+	// @PostMapping("/create")
+	// public Phone create(@RequestBody Phone phone){
+	// 	return phoneDAO.create(phone);
 		
-	}
+	// }
+	@PostMapping("/create")
+    public Phone create(@RequestBody Phone phone) {
+        logger.info("Received request to create phone: {}", phone);
+        Phone createdPhone = phoneDAO.create(phone);
+        logger.info("Phone created successfully: {}", createdPhone);
+        return createdPhone;
+    }
 	@GetMapping("/get/{id}")
 	public Phone get(@PathVariable(name="id") long id) {
 		Phone phone = phoneDAO.findById(id);
